@@ -434,11 +434,6 @@ func (v *StatusIcon) IsEmbedded() bool {
 	return gobool(C.gtk_status_icon_is_embedded(v.native()))
 }
 
-// GetX11WindowID is a wrapper around gtk_status_icon_get_x11_window_id()
-func (v *StatusIcon) GetX11WindowID() uint32 {
-	return uint32(C.gtk_status_icon_get_x11_window_id(v.native()))
-}
-
 // GetHasTooltip is a wrapper around gtk_status_icon_get_has_tooltip()
 func (v *StatusIcon) GetHasTooltip() bool {
 	return gobool(C.gtk_status_icon_get_has_tooltip(v.native()))
