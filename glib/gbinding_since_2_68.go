@@ -12,7 +12,7 @@ import "unsafe"
 
 // DupSource is a wrapper around g_binding_dup_source().
 func (v *Binding) DupSource() *Object {
-	obj := C.g_binding_dup_source(v.native())
+	obj := C.g_binding_get_source(v.native())
 	if obj == nil {
 		return nil
 	}
@@ -21,7 +21,7 @@ func (v *Binding) DupSource() *Object {
 
 // DupTarget is a wrapper around g_binding_dup_target().
 func (v *Binding) DupTarget() *Object {
-	obj := C.g_binding_dup_target(v.native())
+	obj := C.g_binding_get_target(v.native())
 	if obj == nil {
 		return nil
 	}
